@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Meal DB Practice-2022</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="text-center my-3">All Foods</h1>
+        <!-- search options -->
+        <section>
+            <div class="text-center my-4">
+                <input type="text" id="search-input-field" class="form-control d-inline w-25"
+                    placeholder="search by meal">
+                <button id="btn-search" class="btn btn-primary">search</button>
+            </div>
+            <div id="warning-message" class="text-center d-none my-3">
+                <h3 class="text-warning">No Items Found!!!</h3>
+            </div>
+        </section>
+        <!-- meals container -->
+        <section>
+            <div id="meals-container" class="row row-cols-1 row-cols-md-3 g-4"></div>
+            <div id="show-all" class="text-center d-none my-3">
+                <button id="btn-show-all" class="btn btn-primary">Show All</button>
+            </div>
+        </section>
+        <!-- modal -->
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="mealDetailsModal" tabindex="-1" aria-labelledby="mealDetailsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 id="mealDetailsModalLabel" class="modal-title"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="meal-details-body-modal" class="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- loader -->
+        <section>
+            <div style="height: 200px;" id="loader" class="d-flex justify-content-center align-items-center d-none">
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
